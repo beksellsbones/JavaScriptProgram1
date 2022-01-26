@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Program 1</title>
+  </head>
+  <body>
+    <h1>Calculating Tax</h1>
+
+  <form name="form1">
+    <p><input name="ItemCost" type="number" value="">Enter Item Cost</p>
+
+    <p><input name="QuantityPurchased" type="number" value="">Enter Quantity Purchased</p>
+
+    <button name="CalculateCost" onClick="Calculate()" type="button" value="">Calculate</button>
+
+    <p><input name="TotalCostwithTax"type="number" value="">Total Cost with 6% Tax</p>
+  </form>
+
+    <script type="text/javascript">
+      var taxRate = 1.06;
+
+      function Calculate(){
+        var ItemCost = document.form1.ItemCost.value;
+        var QuantityPurchased = document.form1.QuantityPurchased.value;
+        document.form1.TotalCostwithTax.value = ItemCost * QuantityPurchased * taxRate;
+      };
+    </script>
+  </body>
+</html>
